@@ -2,28 +2,28 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <Filter Include="idLib">
-      <UniqueIdentifier>{489546ab-7372-4860-bf18-789be597e0da}</UniqueIdentifier>
+      <UniqueIdentifier>{6c608780-d252-4bd1-9f54-362d7e58b407}</UniqueIdentifier>
     </Filter>
     <Filter Include="idLib\BV">
-      <UniqueIdentifier>{5de9cbb5-9efe-470e-94fb-ac8aeab8aba8}</UniqueIdentifier>
+      <UniqueIdentifier>{ad8d9b27-d153-44a8-8d29-214607660ff8}</UniqueIdentifier>
     </Filter>
     <Filter Include="idLib\Containers">
-      <UniqueIdentifier>{9737ede8-b2d4-408d-836e-2a36550a5caa}</UniqueIdentifier>
+      <UniqueIdentifier>{b7a08c39-da5d-4c43-9e54-bae20ef7b008}</UniqueIdentifier>
     </Filter>
     <Filter Include="idLib\Geometry">
-      <UniqueIdentifier>{4cde8033-6ac1-463f-ae5c-6619c023f17c}</UniqueIdentifier>
+      <UniqueIdentifier>{91064c93-1125-4bb9-90ff-64b9dad1e8c7}</UniqueIdentifier>
     </Filter>
     <Filter Include="idLib\Math">
-      <UniqueIdentifier>{42741160-5eb1-4072-b046-74be656fef2d}</UniqueIdentifier>
+      <UniqueIdentifier>{204a5877-ab42-4399-888a-3ea19f491868}</UniqueIdentifier>
     </Filter>
     <Filter Include="idLib\Hashing">
-      <UniqueIdentifier>{53178c89-0e58-48c0-b412-fc28f8d70817}</UniqueIdentifier>
+      <UniqueIdentifier>{73657f63-aed5-4f07-9145-5e2407a1ce60}</UniqueIdentifier>
     </Filter>
     <Filter Include="idLib\threads">
-      <UniqueIdentifier>{54ad4f64-aa6c-4d7a-b49b-6c548293ba1f}</UniqueIdentifier>
+      <UniqueIdentifier>{37bb3e5c-5311-46ed-9a11-3638db6e839e}</UniqueIdentifier>
     </Filter>
     <Filter Include="idLib\Algorithms">
-      <UniqueIdentifier>{7b665b7b-a87b-46b7-9612-339af086092f}</UniqueIdentifier>
+      <UniqueIdentifier>{432ef59a-6f01-4995-82a7-f1931b1da6f4}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
