@@ -439,6 +439,16 @@ void GiveStuffToPlayer( idPlayer* player, const char* name, const char* value )
 		return;
 	}
 
+	//testing class
+	if ((idStr::Cmpn(name, "class_1", 7) == 0) ) {
+		
+			gameLocal.Printf("works");
+			player->GiveItem("weapon_machinegun");
+
+			return;
+		}
+	
+
 	if ( give_all || idStr::Icmp( name, "health" ) == 0 )	{
 		player->health = player->inventory.maxHealth;
 		if ( player->IsInVehicle() ) {
