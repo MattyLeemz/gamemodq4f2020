@@ -93,7 +93,7 @@ entityDef weapon_machinegun
 	"inv_name"					"#str_107406"
 
 	"fireRate"					".1"
-	"spread"					"2"
+	"spread"					"12" //2
 
 	"mtr_crosshair"				"gfx/guis/crosshairs/crosshair_machinegun"
 	"def_hitscan"				"hitscan_bullet"
@@ -101,7 +101,7 @@ entityDef weapon_machinegun
 	
 	"ammoType"					"ammo_machinegun"
 	"ammoRequired"				"1"
-	"clipSize"					"40"
+	"clipSize"					"20" //40
 	"lowAmmo"					"10"
 	"gui"						"guis/weapons/machinegun_ammo.gui"
 	"gui2"						"guis/weapons/machinegun_inview_scope.gui"
@@ -110,7 +110,7 @@ entityDef weapon_machinegun
 
 	"muzzle_kick_time"			"0.2"
 	"muzzle_kick_maxtime"		"0.6"
-	"muzzle_kick_angles"		"0 0 0"
+	"muzzle_kick_angles"		"-50 -50 0" //0 0 0
 	"muzzle_kick_offset"		"0.5 .15 .15"
 
 	"ejectOffset"				"0.5 -1 -1"
@@ -125,6 +125,65 @@ entityDef weapon_machinegun
   	"def_mod1"					"wpmod_machinegun_ammo"
 
 	"foreshorten"				".6"
+
+	// ---------------------------- Muzzleflash ---------------------------------------
+
+	"mtr_flashShader"			"lights/muzzleflash"
+	"flashColor"				"1 0.8 0.4"
+	"flashRadius"				"200"
+	"flashPointLight"			"1"
+	"flashTime"					".1"
+	"flashViewOffset"			"15 -5 -5"
+
+	// ---------------------------- Flashlight ---------------------------------------
+	
+	"mtr_flashlightShader"		"gfx/lights/flashlight"
+	"flashlightColor"			"1 1 .9"
+	"flashlightRadius"			"400"
+	"flashlightAngle"			"15.0"
+	"flashlightTarget"			"900 0 0"
+	"flashlightUp"				"0 340 0"
+	"flashlightRight"			"0 0 -340"
+	"flashlightPointLight"		"0"
+
+	"mtr_guiLightShader"		"lights/viewWeaponGuiLight"
+	"glightRadius"				"0.9"
+	"glightOffset"				"4 3.5 0.2"
+	"glightColor"				".5 1 1 1"
+
+	"snd_zoomIn"				"weapon_machinegun_scope_in"
+	"snd_zoomOut"				"weapon_machinegun_scope_out"
+	"snd_quaddamage"			"weapon_quaddamage_fire"
+	"snd_bolt"					"weapon_machinegun_bolt"
+	"snd_acquire"				"pickup_weapon"
+	"snd_noAmmo"				"weapon_machinegun_dryfire"
+	
+  	"fx_muzzleflash"			"effects/weapons/machinegun/muzzleflash.fx"
+  	"fx_muzzleflash_world"		"effects/weapons/machinegun/muzzleflash.fx"
+	"fx_respawn"				"effects/mp/itemrespawn.fx"
+
+	"def_viewStyle"				"viewStyle_q3_machinegun"
+	"def_viewStyle1"			"viewStyle_shouldered_machinegun"
+
+	"weaponAngleOffsetAverages" "10"
+	"weaponAngleOffsetScale" 	".2"
+	"weaponAngleOffsetMax"		"3"
+	"weaponOffsetTime"			"400"
+	"weaponOffsetScale"			"0.002"
+
+	// Scope / Zoom
+	"spreadzoom"				"0"
+	"zoomFov"					"50"
+	"zoomTime"					".1"
+	"zoomHideCrosshair"			"0"
+	"gui_zoom"					"guis/weapons/machinegun_scope.gui"
+
+ 	"hidesurface"				"models/weapons/blaster/flare"
+
+	"net_syncPhysics"			"1"
+}
+
+
 
 	// ---------------------------- Muzzleflash ---------------------------------------
 

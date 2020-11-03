@@ -194,13 +194,15 @@ entityDef item_health_small
 	"editor_ignore"			"0"
 }
 
+//new powerups for project
+
 entityDef item_health_hurt50
 {
 	"inherit"				"item_health"
 	"model"					"models/pick_ups/sp_pickups/sp_small_health.lwo"
 	"editor_usage"			"#str_107321"
 	"inv_name"				"#str_107321"
-	"inv_health"			"-100"
+	"inv_health"			"-50"
 	"snd_acquire"			"pickup_health_small"
 	"editor_ignore"			"0"
 }
