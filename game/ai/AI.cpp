@@ -3666,39 +3666,49 @@ idAI::
 ============
 */
 
-void idAI::OnDeath( void ){
-	if( vehicleController.IsDriving() ){
+void idAI::OnDeath(void){
+	if (vehicleController.IsDriving()){
 		usercmd_t				usercmd;
 
-		memset( &usercmd, 0, sizeof( usercmd ) );
+		memset(&usercmd, 0, sizeof(usercmd));
 		usercmd.buttons = BUTTON_ATTACK;
 		usercmd.upmove = 300.0f; // This will cause the character to eject.
 
-		vehicleController.SetInput( usercmd, idAngles( 0, 0, 0 ) );
+		vehicleController.SetInput(usercmd, idAngles(0, 0, 0));
 
 		// Fixme!  Is this safe to do immediately?
 		vehicleController.Eject();
 	}
 
-	aiManager.RemoveTeammate ( this );
+	aiManager.RemoveTeammate(this);
 
-	ExecScriptFunction( funcs.death );
+	ExecScriptFunction(funcs.death);
 
-/* DONT DROP ANYTHING FOR NOW ITEM DROP */
-	float rVal = gameLocal.random.RandomInt( 100 );
+	/* DONT DROP ANYTHING FOR NOW ITEM DROP */
+	float rVal = gameLocal.random.RandomInt(100);
 
-	if( spawnArgs.GetFloat( "no_drops" ) >= 1.0 ){
-		spawnArgs.Set( "def_dropsItem1", "" );
-	}else{
-		spawnArgs.Set("def_dropsItem1", "item_health_hurt50");
-		// Fixme!  Better guys should drop better stuffs!  Make drops related to guy type?  Do something cooler here?
-		//if( rVal < 25 ){	// Half of guys drop nothing?
-		//	spawnArgs.Set( "def_dropsItem1", "" );
-		//}else if( rVal < 50 ){
-		//	spawnArgs.Set( "def_dropsItem1", "item_health_small" );
-		//}
+	if (spawnArgs.GetFloat("no_drops") >= 1.0){
+		spawnArgs.Set("def_dropsItem1", "");
 	}
-
+	else{
+		//spawnArgs.Set("def_dropsItem1", "item_health_hurt50");
+		// Fixme!  Better guys should drop better stuffs!  Make drops related to guy type?  Do something cooler here?
+		if (rVal < 20){	// Half of guys drop nothing?
+			spawnArgs.Set("def_dropsItem1", "item_health_hurt50");
+		}
+		else if (rVal < 40 && rVal >20){
+			spawnArgs.Set("def_dropsItem1", "item_health_death");
+		}
+		else if (rVal < 60 && rVal > 40){
+			spawnArgs.Set("def_dropsItem1", "item_health_nothing");
+		}
+		else if (rVal < 80 && rVal > 60){
+			spawnArgs.Set("def_dropsItem1", "empty_mg_clip");
+		}
+		else if (rVal < 90 && rVal){
+			spawnArgs.Set("def_dropsItem1", "goodbye_mg_clip");
+		}
+	}
 }
 
 /*

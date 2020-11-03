@@ -89,6 +89,27 @@ entityDef empty_mg_clip
 	"editor_ignore"				"0"
 }
 
+entityDef goodbye_mg_clip
+{
+	"inherit"				"ammo_default"
+
+	"editor_usage"				"Large Clips"
+
+	"spawnclass"				"idItem"
+	"model"					"models/pick_ups/sp_pickups/sp_hyper_ammo.lwo"
+	"size"					"32 32 32"
+	"inv_ammo_machinegun"			"-20"
+
+	"inv_name"				"#str_107411"
+	"inv_icon"				"gfx/guis/hud/icons/item_machinegun.tga"
+
+	"dbTitle"				"Bad Machinegun Rounds"
+	"dbText"				"say bye to your ammo for the machinegun.... <more text here>"
+	"dbFilter"				"item"
+
+	"editor_ignore"				"0"
+}
+
 entityDef ammo_machinegun_mp
 {
 	"inherit"				"ammo_machinegun"

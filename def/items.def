@@ -207,6 +207,28 @@ entityDef item_health_hurt50
 	"editor_ignore"			"0"
 }
 
+entityDef item_health_death
+{
+	"inherit"				"item_health"
+	"model"					"models/pick_ups/sp_pickups/sp_small_health.lwo"
+	"editor_usage"			"#str_107321"
+	"inv_name"				"#str_107321"
+	"inv_health"			"-100"
+	"snd_acquire"			"pickup_health_small"
+	"editor_ignore"			"0"
+}
+
+entityDef item_health_nothing
+{
+	"inherit"				"item_health"
+	"model"					"models/pick_ups/sp_pickups/sp_small_health.lwo"
+	"editor_usage"			"#str_107321"
+	"inv_name"				"#str_107321"
+	"inv_health"			"0"
+	"snd_acquire"			"pickup_health_small"
+	"editor_ignore"			"0"
+}
+
 entityDef item_health_small_mp
 {
 	"inherit"				"item_health_small"
