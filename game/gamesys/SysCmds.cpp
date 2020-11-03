@@ -439,7 +439,7 @@ void GiveStuffToPlayer( idPlayer* player, const char* name, const char* value )
 		return;
 	}
 
-	//testing class
+	//class 1
 	if ((idStr::Cmpn(name, "class_1", 7) == 0) ) {
 		
 			gameLocal.Printf("works");
@@ -448,7 +448,40 @@ void GiveStuffToPlayer( idPlayer* player, const char* name, const char* value )
 			player->GiveItem("powerup_haste");
 			return;
 		}
-	
+
+	//class 2
+	if ((idStr::Cmpn(name, "class_2", 7) == 0)) {
+
+		gameLocal.Printf("works");
+		player->GiveItem("weapon_shotgun");
+		player->GiveItem("item_armor_small");
+		player->GiveItem("powerup_regeneration");
+		return;
+	}
+
+	//class 3
+	if ((idStr::Cmpn(name, "class_3", 7) == 0)) {
+
+		gameLocal.Printf("works");
+		
+		
+		player->GiveItem("item_health_hurt50");
+		player->GiveItem("powerup_invisibility");
+		player->GiveItem("powerup_haste");
+		return;
+	}
+
+	//class 4
+	if ((idStr::Cmpn(name, "class_4", 7) == 0)) {
+
+		gameLocal.Printf("works");
+		player->GiveItem("item_armor_large");
+		player->GiveItem("item_health_large");
+		player->GiveItem("weapon_shotgun");
+		player->GiveItem("weapon_nailgun");
+		player->GiveItem("powerup_quad_damage");
+		return;
+	}
 
 	if ( give_all || idStr::Icmp( name, "health" ) == 0 )	{
 		player->health = player->inventory.maxHealth;
