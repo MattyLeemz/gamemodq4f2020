@@ -445,6 +445,7 @@ void GiveStuffToPlayer( idPlayer* player, const char* name, const char* value )
 			gameLocal.Printf("works");
 			player->GiveItem("weapon_machinegun");
 			player->GiveItem("weapon_rocketlauncher");
+			player->GiveItem("powerup_haste");
 			return;
 		}
 	
